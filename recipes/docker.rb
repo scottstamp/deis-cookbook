@@ -1,4 +1,3 @@
-
 include_recipe 'apt'
 
 apt_repository 'dotcloud' do
@@ -8,9 +7,9 @@ apt_repository 'dotcloud' do
   components ['main']
 end
 
-package 'lxc-docker' do
-  version node['deis']['docker']['version']
-end
+package 'lxc-docker-0.6.4'# do
+#  version node['deis']['docker']['version']
+#end
 
 service 'docker' do
   provider Chef::Provider::Service::Upstart  
