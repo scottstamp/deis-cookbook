@@ -7,9 +7,7 @@ apt_repository 'dotcloud' do
   components ['main']
 end
 
-package 'lxc-docker-0.6.4'# do
-#  version node['deis']['docker']['version']
-#end
+package 'lxc-docker-0.6.4'
 
 service 'docker' do
   provider Chef::Provider::Service::Upstart  
